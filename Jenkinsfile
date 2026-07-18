@@ -1,10 +1,27 @@
 pipeline {
-    agent { docker { image 'maven:3.9.16-eclipse-temurin-21-alpine' } }
+    agent any
+
     stages {
-        stage('build') {
+        stage('Install Dependencies') {
             steps {
-                sh 'mvn --version'
+                sh 'npm ci'
             }
+        }
+
+        stage('Run Tests') {
+            steps {
+                sh 'npm test'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+
+        failure {
+            echo 'Pipeline failed!'
         }
     }
 }

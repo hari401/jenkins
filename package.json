@@ -1,0 +1,23 @@
+{
+  "name": "jenkins",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/hari401/jenkins#readme",
+  "bugs": {
+    "url": "https://github.com/hari401/jenkins/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hari401/jenkins.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
